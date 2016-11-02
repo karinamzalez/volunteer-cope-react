@@ -17,6 +17,42 @@
    background-color: white;
  }
 
+
+.c--anim-btn span {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.c--anim-btn, .c-anim-btn {
+  transition: 0.3s;
+}
+
+.c--anim-btn {
+  float: center;
+  height: 64px;
+  font: normal normal 300 1em/4em 'Open Sans';
+  overflow: hidden;
+  width: 300px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.c-anim-btn{
+  margin-top: -1em;
+}
+
+.c--anim-btn:hover .c-anim-btn{
+  margin-top: -5em;
+}
+
+.c--anim-btn a:hover {
+  text-decoration: none;
+}
+
 .home-bar {
   background-image: url("http://newshour-tc.pbs.org/newshour/wp-content/uploads/2014/05/L_1.jpg");
   background-repeat: no-repeat;
@@ -35,6 +71,10 @@
   color: rgba(0, 178, 192, 0.5);
 }
 
+.left {
+  margin-left: -45px;
+}
+
 #logo {
   background: url("http://www.bgcmd.org/wp-content/themes/bgcmd2014/images/logo.png") no-repeat;
   background-position: center;
@@ -44,6 +84,22 @@
   padding-top: -10px;
 }
 
-.move {
-  margin-bottom: 20px;
+.pad {
+  padding-top: 15px;
+}
+
+.pageheader {
+  width: 100%;
+  background-color: rgba(0, 178, 192, 0.5) ! important;
+  height: 8em;
+  margin: 255px 0 0 0;
+}
+
+.pageheader h4 {
+  padding-top: 30px;
+  float: center;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Courier New', Courier, monospace;
 }
