@@ -12,8 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require react
 //= require react_ujs
 //= require components
 //= require_tree .
+
+function blinker() {
+  $('.blink_me').fadeOut(500);
+  $('.blink_me').fadeIn(500);
+}
+
+setInterval(blinker, 1000);
