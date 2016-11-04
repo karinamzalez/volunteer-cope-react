@@ -47,7 +47,7 @@ class GithubOauthService
 
   def token_params(code)
     if Rails.env.production?
-      redirect_uri = "https://volunteer-cope.herokuapp.com/auth/github/calback"
+      redirect_uri = "https://volunteer-cope.herokuapp.com/auth/github/callback"
     else
       redirect_uri = "http://127.0.0.1:3000/auth/github/callback"
     end
@@ -58,3 +58,4 @@ class GithubOauthService
       "Content-Type" => "application/x-www-form-urlencoded"
     }
   end
+end
