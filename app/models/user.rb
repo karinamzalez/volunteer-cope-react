@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   before_create :create_slug
   has_many :user_lessons
-  has_many :users. through: :user_lessons
+  has_many :users, through: :user_lessons
 
   def create_slug
     self.slug = self.username.parameterize
@@ -20,5 +20,9 @@ class User < ApplicationRecord
     user.oauth_token = oauth.access_token
     user.save
     user
+  end
+
+  def add_as_collaborator
+    `curl -X PUT -H "Authorization: token #{ENV['ADMIN_TOKEN']}" -H "Cache-Control: no-cache" "https://api.github.com/repos/volunteercope/volunteer_cope/collaborators/#{username}"`
   end
 end
