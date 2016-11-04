@@ -8,12 +8,12 @@ class GithubOauthService
     @access_token   = parse_access_token
   end
 
-  def authenticate?
+  def authenticated?
     @token_response.body.include?("access_token") ? true : false
   end
 
   def get_user
-    uri       = URI('http://api.github.com/user')
+    uri       = URI('https://api.github.com/user')
     params    = { :access_token => access_token }
     uri.query = URI.encode_www_form(params)
 
@@ -25,7 +25,7 @@ class GithubOauthService
   private
 
   def get_access_token(code)
-    uri = URI('http://github.com/login/oauth/access_token')
+    uri = URI('https://github.com/login/oauth/access_token')
 
     login_request = Net::HTTP::Post.new(uri)
     login_request.set_form_data(token_params(code))

@@ -1,6 +1,5 @@
 class SessionsController  < ApplicationController
   def create
-    byebug
     oauth = GithubOauthService.new(params[:code])
     if params[:code] && oauth.authenticated?
       if user = User.from_riniauth(oauth)
