@@ -13,10 +13,18 @@
  *= require_tree .
  *= require_self
  */
- body.homepage {
-   background-color: white;
- }
 
+.blue-text {
+  color:rgba(0, 178, 192, 0.5);
+  font-size: 22px;
+  margin-bottom: -38px;
+  margin-top: 10px;
+  padding-right: 2px;
+}
+
+body.homepage {
+  background-color: white;
+}
 
 .c--anim-btn span {
   color: white;
@@ -51,6 +59,21 @@
 
 .c--anim-btn a:hover {
   text-decoration: none;
+}
+
+.green-text {
+  color: #abc90b;
+  font-size: 22px;
+  margin-bottom: -38px;
+  margin-top: 10px;
+}
+
+.grey-text {
+  color: #8e8e8e;
+  font-size: 22px;
+  margin-bottom: -38px;
+  margin-top: 10px;
+  padding-left: 2px;
 }
 
 .home-bar {
